@@ -2,5 +2,6 @@
 Use sharp library to trim png images folder
 
 # Run
-npm install
-node trim.js
+`npm install`
+
+`node trim.js`
