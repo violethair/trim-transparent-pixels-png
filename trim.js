@@ -18,6 +18,14 @@ const allFilesSync = (dir, fileList = []) => {
 const images = allFilesSync('images/').filter((filename) => filename.match(/\.png$/));
 
 async function run() {
+	// create output folder if not exists
+	try {
+		fs.readdirSync("./output")
+	} catch (error) {
+		fs.mkdirSync("./output")
+	}
+
+	// trim start
 	for (let i = 0; i < images.length; i++) {
 		const filename = images[i]
 		const fileNameIn = path.join(__dirname, `images/${filename}`)
