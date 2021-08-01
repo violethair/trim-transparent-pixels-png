@@ -5,3 +5,5 @@ Use sharp library to trim png images folder
 `npm install`
 
 `node trim.js`
+
+Result saved in /output folder
